@@ -6,6 +6,7 @@ The repository contains the following:
 - OCR Jupyter Notebook which:
   - recognizes feature points (characters) from input image and saves them as individual image files
   - recognizes characters (OCR) from input image and calculates the result (parsing)
+  - *parsing only works for addition and subtraction
 - CNN Jupyter Notebook which:
   - takes input images and provides predictions (TensorFlow) after training (Mnist dataset)
   
@@ -13,4 +14,5 @@ The code features lots of lazy programming, and is far from perfect. Several wor
 
 TODO:
   - Train neural net to recognize operators as well (not just digits)
+  - Make parsing possible for all operators (addition, subtraction, multiplication, division, and brackets)
   - Merge both Notebooks into a single workflow
