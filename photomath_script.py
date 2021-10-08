@@ -32,6 +32,20 @@ class Photomath:
         return thresh
 
     @staticmethod
+    def imgChannel(filename):
+
+        img = np.array(Image.open(filename))
+
+        if len(img.shape) == 3:
+            img_channel = img[:, :, -1]
+        elif len(img.shape) == 2:
+            img_channel = img
+        else:
+            raise AttributeError("Please provide CMYK or greyscale image.")
+
+        return img_channel
+
+    @staticmethod
     def recognizeCharacters(image):
         """Method for recognizing characters from image
 
